@@ -1,50 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>João Vitor | Portfólio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/scrollreveal"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/scrollreveal"></script>
   <style>
     body {
       font-family: 'Inter', sans-serif;
       background-color: #0f0f0f;
       color: #fff;
     }
-    .hero {
-      background: radial-gradient(circle at top left, #111, #000);
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    header {
+      background-color: #000;
+      padding: 2rem 1rem;
       text-align: center;
-      position: relative;
     }
-    .robo {
-      position: absolute;
-      bottom: 0;
-      right: 10%;
-      width: 150px;
-      animation: walk 10s linear infinite;
+    nav a {
+      margin: 0 1rem;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
     }
-    @keyframes walk {
-      0% { transform: translateX(100vw); }
-      100% { transform: translateX(-200px); }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .section {
+      padding: 4rem 1rem;
     }
     .card {
       background-color: #1a1a1a;
       border: none;
+      padding: 1.5rem;
+      border-radius: 10px;
       transition: transform 0.3s ease;
     }
     .card:hover {
-      transform: scale(1.05);
+      transform: translateY(-5px);
     }
-    .btn-dark {
-      background-color: #000;
-      color: #fff;
+    footer {
+      background-color: #111;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 4rem;
     }
     .whatsapp-btn {
       position: fixed;
@@ -54,82 +55,70 @@
       color: #fff;
       padding: 15px;
       border-radius: 50%;
-      text-align: center;
       font-size: 24px;
       z-index: 1000;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
-  <!-- Menu -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">João Vitor</a>
-      <div class="collapse navbar-collapse">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
 
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-    <div>
-      <h1 class="text-5xl font-bold">Olá, eu sou João Vitor</h1>
-      <p class="mt-4 text-xl">Construindo soluções inteligentes</p>
-    </div>
-    <img class="robo" src="https://assets2.lottiefiles.com/private_files/lf30_q1rcxpwx.json" alt="Robo animado" onerror="this.style.display='none';"/>
+  <header>
+    <h1 class="text-4xl font-bold">João Vitor</h1>
+    <p class="text-xl mt-2">Construindo soluções inteligentes</p>
+    <nav class="mt-4">
+      <a href="#home">Home</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#projetos">Projetos</a>
+    </nav>
+  </header>
+
+  <section id="home" class="section text-center">
+    <h2 class="text-3xl font-bold mb-4">Bem-vindo ao meu portfólio</h2>
+    <p class="text-lg">Aqui você encontra meus projetos, habilidades e formas de entrar em contato comigo.</p>
   </section>
 
-  <!-- Sobre -->
-  <section class="container py-5" id="sobre">
-    <h2 class="text-3xl font-bold mb-4">Sobre</h2>
-    <p>Sou desenvolvedor full stack com foco em automações, inteligência artificial e soluções personalizadas para empresas. Tenho experiência com Python, JavaScript, C#, Shell Script, DevOps e infraestrutura Linux.</p>
+  <section id="sobre" class="section container">
+    <h2 class="text-3xl font-bold mb-4">Sobre mim</h2>
+    <p>Sou desenvolvedor apaixonado por tecnologia, com foco em automações, back-end e soluções modernas usando Python, JavaScript, Shell Script, DevOps e Linux. Meu objetivo é construir ferramentas práticas que resolvem problemas reais.</p>
   </section>
 
-  <!-- Projetos -->
-  <section class="container py-5" id="projetos">
+  <section id="projetos" class="section container">
     <h2 class="text-3xl font-bold mb-4">Projetos</h2>
     <div class="row g-4">
       <div class="col-md-4">
-        <div class="card p-3">
+        <div class="card">
           <h5 class="text-xl font-semibold">Análise Financeira</h5>
-          <p>Ferramenta de análise usando Python e pandas.</p>
-          <a href="https://github.com/joaovitorfe/analise-financeira" target="_blank" class="btn btn-dark mt-2">Ver no GitHub</a>
+          <p>Ferramenta com Python para análise de dados financeiros.</p>
+          <a href="https://github.com/joaovitorfe/analise-financeira" target="_blank" class="btn btn-outline-light mt-2">Ver Projeto</a>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="card p-3">
+        <div class="card">
           <h5 class="text-xl font-semibold">Chat IA</h5>
-          <p>Interface de chatbot inteligente.</p>
-          <a href="https://github.com/joaovitorfe/CHAT-IA" target="_blank" class="btn btn-dark mt-2">Ver no GitHub</a>
+          <p>Chatbot inteligente com interface personalizada.</p>
+          <a href="https://github.com/joaovitorfe/CHAT-IA" target="_blank" class="btn btn-outline-light mt-2">Ver Projeto</a>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="card p-3">
-          <h5 class="text-xl font-semibold">Automação Documentos</h5>
-          <p>Geração de documentos automatizada.</p>
-          <a href="https://github.com/joaovitorfe/automa-o-de-documentos" target="_blank" class="btn btn-dark mt-2">Ver no GitHub</a>
+        <div class="card">
+          <h5 class="text-xl font-semibold">Automação de Documentos</h5>
+          <p>Script para automação na criação de documentos.</p>
+          <a href="https://github.com/joaovitorfe/automa-o-de-documentos" target="_blank" class="btn btn-outline-light mt-2">Ver Projeto</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Rodapé -->
-  <footer class="text-center p-4 mt-5" style="background-color: #111;">
+  <footer>
     <p>© 2025 João Vitor | <a href="https://www.linkedin.com/in/joaovitorferr/" class="text-white">LinkedIn</a></p>
   </footer>
 
-  <!-- WhatsApp -->
-  <a href="https://wa.me/5545998311228" target="_blank" class="whatsapp-btn">
-    <i class="bi bi-whatsapp"></i>
-  </a>
+  <a href="https://wa.me/5545998311228" target="_blank" class="whatsapp-btn">📱</a>
 
   <script>
-    ScrollReveal().reveal('section', { delay: 300, distance: '50px', origin: 'bottom' });
+    ScrollReveal().reveal('.section', { delay: 300, distance: '50px', origin: 'bottom' });
   </script>
+
 </body>
 </html>
