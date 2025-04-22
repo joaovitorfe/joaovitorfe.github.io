@@ -7,11 +7,12 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
-    /* Estilo global */
     body {
       font-family: 'Arial', sans-serif;
       background-color: #f7f7f7;
       color: #333;
+      margin: 0;
+      padding: 0;
       position: relative;
     }
 
@@ -32,40 +33,32 @@
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
-    /* Estilo do robô animado */
+    /* Animação do robô */
     .robot {
       position: absolute;
       bottom: 20px;
       left: -200px;
       width: 150px;
       height: 150px;
-      background-image: url('https://example.com/robot-image.png'); /* Substitua pelo link da imagem do robô */
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/9f/Robot_icon.svg'); /* Imagem simples de robô */
       background-size: contain;
-      animation: walkRobot 15s linear infinite;
+      animation: walkRobot 10s linear infinite;
       z-index: -1;
     }
 
     @keyframes walkRobot {
       0% {
-        transform: translateX(-200px) rotate(0deg);
+        transform: translateX(-200px);
       }
       50% {
-        transform: translateX(100vw) rotate(180deg);
+        transform: translateX(100vw);
       }
       100% {
-        transform: translateX(-200px) rotate(360deg);
+        transform: translateX(-200px);
       }
     }
 
-    /* Seções do site */
-    .section-title {
-      font-size: 2rem;
-      font-weight: 600;
-      margin-bottom: 30px;
-      color: #333;
-    }
-
-    /* Estilo dos cards de projetos */
+    /* Estilo dos Cards */
     .card {
       border: none;
       border-radius: 10px;
@@ -76,31 +69,6 @@
     .card:hover {
       transform: translateY(-10px);
       box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Botão customizado */
-    .btn-custom {
-      background-color: #007bff;
-      color: white;
-      border-radius: 50px;
-      padding: 10px 20px;
-      transition: background-color 0.3s ease;
-    }
-
-    .btn-custom:hover {
-      background-color: #0056b3;
-    }
-
-    /* Animação de fade-in para seções */
-    .fade-in {
-      opacity: 0;
-      animation: fadeIn 1.5s ease-in-out forwards;
-    }
-
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
     }
 
     /* WhatsApp Button */
@@ -138,58 +106,58 @@
   </section>
 
   <!-- Sobre -->
-  <section id="sobre" class="container mx-auto p-6 my-10 fade-in">
-    <h2 class="section-title">Sobre Mim</h2>
+  <section id="sobre" class="container mx-auto p-6 my-10">
+    <h2 class="text-2xl font-semibold mb-6">Sobre Mim</h2>
     <p class="text-gray-600 text-lg text-center">
       Olá! Sou João Vitor, desenvolvedor full stack com experiência em Python, PHP, JavaScript e outras tecnologias. Tenho paixão por criar soluções inovadoras e resolver problemas complexos.
     </p>
   </section>
 
   <!-- Projetos -->
-  <section id="projetos" class="container mx-auto p-6 fade-in">
-    <h2 class="section-title">Meus Projetos</h2>
+  <section id="projetos" class="container mx-auto p-6">
+    <h2 class="text-2xl font-semibold mb-6">Meus Projetos</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       
       <!-- Card do Projeto 1 -->
-      <div class="card bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
+      <div class="card bg-white p-6 rounded-xl shadow-md">
         <h3 class="text-xl font-semibold mb-2">Análise Financeira</h3>
         <p class="text-gray-600 mb-3">
           Projeto de análise de dados financeiros utilizando Python para processamento e visualização de informações.
         </p>
-        <a href="https://github.com/joaovitorfe/analise-financeira" class="btn btn-custom btn-sm" target="_blank">
+        <a href="https://github.com/joaovitorfe/analise-financeira" class="btn btn-primary btn-sm" target="_blank">
           Ver Código
         </a>
       </div>
 
       <!-- Card do Projeto 2 -->
-      <div class="card bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
+      <div class="card bg-white p-6 rounded-xl shadow-md">
         <h3 class="text-xl font-semibold mb-2">Chat com Inteligência Artificial</h3>
         <p class="text-gray-600 mb-3">
           Interface e backend para chatbot com integração de IA, utilizando Python e APIs de processamento de linguagem natural.
         </p>
-        <a href="https://github.com/joaovitorfe/CHAT-IA" class="btn btn-custom btn-sm" target="_blank">
+        <a href="https://github.com/joaovitorfe/CHAT-IA" class="btn btn-primary btn-sm" target="_blank">
           Ver Código
         </a>
       </div>
 
       <!-- Card do Projeto 3 -->
-      <div class="card bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
+      <div class="card bg-white p-6 rounded-xl shadow-md">
         <h3 class="text-xl font-semibold mb-2">Automação de Documentos</h3>
         <p class="text-gray-600 mb-3">
           Script para automatizar a geração e edição de documentos a partir de templates, ideal para relatórios e contratos.
         </p>
-        <a href="https://github.com/joaovitorfe/automa-o-de-documentos" class="btn btn-custom btn-sm" target="_blank">
+        <a href="https://github.com/joaovitorfe/automa-o-de-documentos" class="btn btn-primary btn-sm" target="_blank">
           Ver Código
         </a>
       </div>
 
       <!-- Card do Projeto 4 -->
-      <div class="card bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
+      <div class="card bg-white p-6 rounded-xl shadow-md">
         <h3 class="text-xl font-semibold mb-2">Blog em PHP</h3>
         <p class="text-gray-600 mb-3">
           Sistema de blog completo, com painel administrativo, gerenciamento de posts e categorias, feito com PHP.
         </p>
-        <a href="https://github.com/joaovitorfe/blog-php" class="btn btn-custom btn-sm" target="_blank">
+        <a href="https://github.com/joaovitorfe/blog-php" class="btn btn-primary btn-sm" target="_blank">
           Ver Código
         </a>
       </div>
@@ -210,6 +178,6 @@
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- FontAwesome para o ícone do WhatsApp -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
 </html>
