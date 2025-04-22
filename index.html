@@ -83,4 +83,133 @@
       background-color: #007bff;
       color: white;
       border-radius: 50px;
-      padding: 10px
+      padding: 10px 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-custom:hover {
+      background-color: #0056b3;
+    }
+
+    /* Animação de fade-in para seções */
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1.5s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* WhatsApp Button */
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      z-index: 1000;
+    }
+
+    .whatsapp-button:hover {
+      transform: scale(1.1);
+    }
+
+    .whatsapp-button i {
+      font-size: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Robô animado -->
+  <div class="robot"></div>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <h1>João Vitor</h1>
+  </section>
+
+  <!-- Sobre -->
+  <section id="sobre" class="container mx-auto p-6 my-10 fade-in">
+    <h2 class="section-title">Sobre Mim</h2>
+    <p class="text-gray-600 text-lg text-center">
+      Olá! Sou João Vitor, desenvolvedor full stack com experiência em Python, PHP, JavaScript e outras tecnologias. Tenho paixão por criar soluções inovadoras e resolver problemas complexos.
+    </p>
+  </section>
+
+  <!-- Projetos -->
+  <section id="projetos" class="container mx-auto p-6 fade-in">
+    <h2 class="section-title">Meus Projetos</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <!-- Card do Projeto 1 -->
+      <div class="card bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
+        <h3 class="text-xl font-semibold mb-2">Análise Financeira</h3>
+        <p class="text-gray-600 mb-3">
+          Projeto de análise de dados financeiros utilizando Python para processamento e visualização de informações.
+        </p>
+        <a href="https://github.com/joaovitorfe/analise-financeira" class="btn btn-custom btn-sm" target="_blank">
+          Ver Código
+        </a>
+      </div>
+
+      <!-- Card do Projeto 2 -->
+      <div class="card bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
+        <h3 class="text-xl font-semibold mb-2">Chat com Inteligência Artificial</h3>
+        <p class="text-gray-600 mb-3">
+          Interface e backend para chatbot com integração de IA, utilizando Python e APIs de processamento de linguagem natural.
+        </p>
+        <a href="https://github.com/joaovitorfe/CHAT-IA" class="btn btn-custom btn-sm" target="_blank">
+          Ver Código
+        </a>
+      </div>
+
+      <!-- Card do Projeto 3 -->
+      <div class="card bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
+        <h3 class="text-xl font-semibold mb-2">Automação de Documentos</h3>
+        <p class="text-gray-600 mb-3">
+          Script para automatizar a geração e edição de documentos a partir de templates, ideal para relatórios e contratos.
+        </p>
+        <a href="https://github.com/joaovitorfe/automa-o-de-documentos" class="btn btn-custom btn-sm" target="_blank">
+          Ver Código
+        </a>
+      </div>
+
+      <!-- Card do Projeto 4 -->
+      <div class="card bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
+        <h3 class="text-xl font-semibold mb-2">Blog em PHP</h3>
+        <p class="text-gray-600 mb-3">
+          Sistema de blog completo, com painel administrativo, gerenciamento de posts e categorias, feito com PHP.
+        </p>
+        <a href="https://github.com/joaovitorfe/blog-php" class="btn btn-custom btn-sm" target="_blank">
+          Ver Código
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center p-4">
+    <p>&copy; 2025 João Vitor - Todos os direitos reservados</p>
+  </footer>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/45998311228" class="whatsapp-button" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- FontAwesome para o ícone do WhatsApp -->
+</body>
+</html>
