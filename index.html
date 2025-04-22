@@ -1,86 +1,95 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>João Vitor - Portfólio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 0;
-      color: #333;
-    }
-    header {
-      background-color: #222;
-      color: #fff;
-      padding: 2rem;
-      text-align: center;
-    }
-    h1 {
-      margin: 0;
-    }
-    section {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    .project {
-      background-color: #fff;
-      border-radius: 8px;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    .project h2 {
-      margin-top: 0;
-    }
-    .project a {
-      color: #1a73e8;
-      text-decoration: none;
-    }
-    .project a:hover {
-      text-decoration: underline;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>João Vitor - Desenvolvedor; Analista de Sistemas</h1>
-    <p>Especializado em automações, sistemas web e soluções inteligentes</p>
-    <p><a href="https://github.com/joaovitorfe" target="_blank" style="color: #90caf9;">Meu GitHub</a></p>
-  </header>
-  <section>
-    <div class="project">
-      <h2>Análise Financeira</h2>
-      <p>Projeto de análise de dados financeiros usando Python para processamento e visualização de informações.</p>
-      <p><a href="https://github.com/joaovitorfe/analise-financeira" target="_blank">Ver no GitHub</a></p>
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>João Vitor - Portfólio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-900 text-white">
+    <header class="text-center p-10 bg-gray-800 shadow-lg">
+      <h1 class="text-4xl font-bold">João Vitor</h1>
+      <p class="text-lg mt-2">Desenvolvedor, analista de sistemas</p>
+      <p class="text-sm text-gray-400">joaovitorgalvaoferreira@gmail.com</p>
+      <a
+        href="https://github.com/joaovitorfe"
+        class="text-blue-400 hover:underline"
+        target="_blank"
+        >Meu GitHub</a
+      >
+    </header>
 
-    <div class="project">
-      <h2>Chat com Inteligência Artificial</h2>
-      <p>Interface e backend para chatbot com integração de IA, utilizando Python e APIs de processamento de linguagem natural.</p>
-      <p><a href="https://github.com/joaovitorfe/CHAT-IA" target="_blank">Ver no GitHub</a></p>
-    </div>
+    <main class="container mx-auto p-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-gray-800 p-6 rounded-xl shadow-md">
+          <h2 class="text-xl font-semibold mb-2">Análise Financeira</h2>
+          <p class="text-gray-300 mb-2">
+            Projeto de análise de dados financeiros usando Python para processamento e visualização de informações.
+          </p>
+          <a
+            href="https://github.com/joaovitorfe/analise-financeira"
+            class="btn btn-primary btn-sm"
+            target="_blank"
+            >Ver Código</a
+          >
+        </div>
 
-    <div class="project">
-      <h2>Automação de Documentos</h2>
-      <p>Script em Python para automatizar a geração e edição de documentos a partir de templates. Ideal para relatórios e contratos.</p>
-      <p><a href="https://github.com/joaovitorfe/automa-o-de-documentos" target="_blank">Ver no GitHub</a></p>
-    </div>
+        <div class="bg-gray-800 p-6 rounded-xl shadow-md">
+          <h2 class="text-xl font-semibold mb-2">Chat com Inteligência Artificial</h2>
+          <p class="text-gray-300 mb-2">
+            Interface e backend para chatbot com integração de IA, utilizando Python e APIs de processamento de linguagem natural.
+          </p>
+          <a
+            href="https://github.com/joaovitorfe/CHAT-IA"
+            class="btn btn-primary btn-sm"
+            target="_blank"
+            >Ver Código</a
+          >
+        </div>
 
-    <div class="project">
-      <h2>Blog em PHP</h2>
-      <p>Sistema de blog construído com PHP puro, com funcionalidades como cadastro de posts, categorias e painel administrativo.</p>
-      <p><a href="https://github.com/joaovitorfe/blog-php" target="_blank">Ver no GitHub</a></p>
-    </div>
+        <div class="bg-gray-800 p-6 rounded-xl shadow-md">
+          <h2 class="text-xl font-semibold mb-2">Automação de Documentos</h2>
+          <p class="text-gray-300 mb-2">
+            Script em Python para automatizar a geração e edição de documentos a partir de templates. Ideal para relatórios e contratos.
+          </p>
+          <a
+            href="https://github.com/joaovitorfe/automa-o-de-documentos"
+            class="btn btn-primary btn-sm"
+            target="_blank"
+            >Ver Código</a
+          >
+        </div>
 
-    <div class="project">
-      <h2>Sistema de Restaurante</h2>
-      <p>Projeto completo para gerenciamento de pedidos e cardápio em restaurantes, com backend robusto e foco em performance.</p>
-      <p><a href="https://github.com/joaovitorfe/sistema-de-restaurante" target="_blank">Ver no GitHub</a></p>
-    </div>
-  </section>
-</body>
+        <div class="bg-gray-800 p-6 rounded-xl shadow-md">
+          <h2 class="text-xl font-semibold mb-2">Blog em PHP</h2>
+          <p class="text-gray-300 mb-2">
+            Sistema de blog construído com PHP puro, com funcionalidades como cadastro de posts, categorias e painel administrativo.
+          </p>
+          <a
+            href="https://github.com/joaovitorfe/blog-php"
+            class="btn btn-primary btn-sm"
+            target="_blank"
+            >Ver Código</a
+          >
+        </div>
+
+        <div class="bg-gray-800 p-6 rounded-xl shadow-md">
+          <h2 class="text-xl font-semibold mb-2">Sistema de Restaurante</h2>
+          <p class="text-gray-300 mb-2">
+            Projeto completo para gerenciamento de pedidos e cardápio em restaurantes, com backend robusto e foco em performance.
+          </p>
+          <a
+            href="https://github.com/joaovitorfe/sistema-de-restaurante"
+            class="btn btn-primary btn-sm"
+            target="_blank"
+            >Ver Código</a
+          >
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
